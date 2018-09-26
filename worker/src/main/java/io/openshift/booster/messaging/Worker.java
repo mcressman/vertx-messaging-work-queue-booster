@@ -124,6 +124,8 @@ public class Worker extends AbstractVerticle {
     if (reverse) {
       text = new StringBuilder(text).reverse().toString();
     }
+    // add more to text
+    text = new StringBuilder(text).append(": mcressman").toString();
 
     return text;
   }
