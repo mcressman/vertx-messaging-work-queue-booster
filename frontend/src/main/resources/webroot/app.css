@@ -284,7 +284,7 @@ span.placeholder {
     font-size: 1.2em;
     display: grid;
     grid: "t t t t"
-          "u r a b";
+          "u r r b";
     grid-gap: 1em;
     grid-template-columns: repeat(4, 1fr);
 }
@@ -324,7 +324,7 @@ span.placeholder {
 }
 
 #request-annotate-option {
-    grid-area: a;
+    grid-area: r;
     font-size: 0.9em;
     font-weight: 300;
     padding-top: 0.3em;
