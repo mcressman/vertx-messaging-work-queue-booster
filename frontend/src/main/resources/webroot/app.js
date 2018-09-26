@@ -62,6 +62,7 @@ class Application {
             text: form.text.value,
             uppercase: form.uppercase.checked,
             reverse: form.reverse.checked,
+	    annotate: form.annotate.checked,
         };
 
         let json = JSON.stringify(data);

@@ -181,6 +181,7 @@ public class Frontend extends AbstractVerticle {
     Map<String, Object> props = new HashMap<>();
     props.put("uppercase", request.isUppercase());
     props.put("reverse", request.isReverse());
+    props.put("annotate", request.doAnnotate());
 
     Message message = Message.Factory.create();
     message.setMessageId(requestId);

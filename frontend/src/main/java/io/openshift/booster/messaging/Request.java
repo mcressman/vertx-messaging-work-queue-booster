@@ -20,6 +20,7 @@ public class Request {
     private String text;
     private boolean uppercase;
     private boolean reverse;
+    private boolean annotate;
 
     public String getText() {
         return text;
@@ -37,9 +38,13 @@ public class Request {
         return reverse;
     }
 
+    public boolean doAnnotate() {
+        return annotate;
+    }
+
     @Override
     public String toString() {
-        return String.format("Request{text=%s, uppercase=%s, reverse=%s}",
-                             text, uppercase, reverse);
+        return String.format("Request{text=%s, uppercase=%s, reverse=%s, annotate=%s}",
+                             text, uppercase, reverse, annotate);
     }
 }

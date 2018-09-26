@@ -115,6 +115,7 @@ public class Worker extends AbstractVerticle {
     Map props = request.getApplicationProperties().getValue();
     boolean uppercase = (boolean) props.get("uppercase");
     boolean reverse = (boolean) props.get("reverse");
+    boolean annotate = (boolean) props.get("annotate");
     String text = (String) ((AmqpValue) request.getBody()).getValue();
 
     if (uppercase) {
@@ -124,8 +125,11 @@ public class Worker extends AbstractVerticle {
     if (reverse) {
       text = new StringBuilder(text).reverse().toString();
     }
+
     // add more to text
-    text = new StringBuilder(text).append(": mcressman").toString();
+    if (annotate) {
+      text = new StringBuilder(text).append(": mcressman").toString();
+    }
 
     return text;
   }
